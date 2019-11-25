@@ -1,20 +1,23 @@
 {
   "name": "graphql-master-filter",
   "version": "1.0.0",
-  "description": "A master filter that can be handle all available searchable data using Graphql",
+  "description": "A master filter that can be handle all available searchable data using Graphqll",
   "main": "index.js",
   "repository": "https://github.com/GuilhermeSillva/graphql-master-filter.git",
   "author": "Guilherme Silva <guilhermesillva.grs@gmail.com>",
   "license": "MIT",
-  "scripts":{
-	  "start" : "nodemon"
+  "scripts": {
+    "start": "nodemon --ext js,graphql"
   },
   "dependencies": {
-    "apollo-server": "^2.9.11",
-    "graphql": "^14.5.8"
+    "graphql-import": "^0.7.1",
+    "graphql-yoga": "^1.18.3"
   },
   "devDependencies": {
-    "eslint": "^6.6.0",
-    "nodemon": "^2.0.0"
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-vue": "^6.0.1",
+    "nodemon": "^2.0.1"
   }
 }

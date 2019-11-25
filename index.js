@@ -1,12 +1,6 @@
-const {ApolloServer, gql } = require('apollo-server')
+const { GraphQLServer } = require('graphql-yoga')
+const { importSchema } = require('graphql-import')
 
-const typeDefs = gql`
-	#API entry point
-	type Query {
-		teste: String
-
-	}
-`
 
 const resolvers = {
 	Query:{
@@ -17,11 +11,9 @@ const resolvers = {
 
 }
 
-const server = new ApolloServer({
-	typeDefs,
+const server = new GraphQLServer({
+	typeDefs: importSchema('./schema/index.graphql'),
 	resolvers
 })
 
-server.listen().then(({ url }) => {
-
-})
+server.start(() => console.log('Server is running on localhost:4000'))
